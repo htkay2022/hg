@@ -7,22 +7,24 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Phone, Mail, Home, Key, CheckCircle, ArrowRight, Menu, X } from 'lucide-react';
 
-// Component to handle JotForm script injection
-const JotForm = ({ src, id }: { src: string; id: string }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      // Clear container
-      containerRef.current.innerHTML = '';
-      const script = document.createElement('script');
-      script.src = src;
-      script.type = 'text/javascript';
-      containerRef.current.appendChild(script);
-    }
-  }, [src]);
-
-  return <div ref={containerRef} id={`jotform-container-${id}`} className="w-full min-h-[500px]" />;
+// Component to handle JotForm iframe embed
+const JotForm = ({ id }: { id: string }) => {
+  return (
+    <div className="w-full overflow-hidden">
+      <iframe
+        id={`JotFormIFrame-${id}`}
+        title="JotForm"
+        src={`https://form.jotform.com/${id}`}
+        style={{
+          width: '100%',
+          height: '800px',
+          border: 'none',
+        }}
+        allowFullScreen={true}
+        allow="geolocation; microphone; camera; fullscreen"
+      />
+    </div>
+  );
 };
 
 export default function App() {
@@ -257,8 +259,7 @@ export default function App() {
                   animate={{ opacity: 1, x: 0 }}
                   key="sell-form"
                 >
-                  <h3 className="text-2xl font-bold mb-6 text-stone-900">Sell Your Property</h3>
-                  <JotForm src="https://form.jotform.com/jsform/260717228293056" id="sell" />
+                  <JotForm id="260717228293056" />
                 </motion.div>
               )}
               {activeForm === 'rental' && (
@@ -267,8 +268,7 @@ export default function App() {
                   animate={{ opacity: 1, x: 0 }}
                   key="rental-form"
                 >
-                  <h3 className="text-2xl font-bold mb-6 text-stone-900">Rental Request</h3>
-                  <JotForm src="https://form.jotform.com/jsform/260717874750061" id="rental" />
+                  <JotForm id="260717874750061" />
                 </motion.div>
               )}
               {!activeForm && (
