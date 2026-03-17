@@ -305,7 +305,7 @@ export default function App() {
                   </div>
                 </a>
                 <a 
-                  href="mailto:lucsolution22@gmail.com" 
+                  href="mailto:info@habesolgroup.com" 
                   className="flex items-center gap-4 p-6 bg-stone-50 rounded-2xl border border-stone-100 hover:border-emerald-600 transition-all group"
                 >
                   <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -313,7 +313,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-stone-400 uppercase tracking-widest">Email Us</p>
-                    <p className="text-lg font-bold text-stone-900">lucsolution22@gmail.com</p>
+                    <p className="text-lg font-bold text-stone-900">info@habesolgroup.com</p>
                   </div>
                 </a>
               </div>
