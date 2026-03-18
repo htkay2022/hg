@@ -202,6 +202,23 @@ export default function App() {
                     <span className="text-lg text-stone-200">Direct property management</span>
                   </div>
                 </div>
+                <p className="text-xl text-stone-300 leading-relaxed mb-8">
+                  We are based in South Florida, serving key markets including:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                      <CheckCircle size={20} />
+                    </div>
+                    <span className="text-lg text-stone-200">Miami-Dade County</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center text-emerald-400">
+                      <CheckCircle size={20} />
+                    </div>
+                    <span className="text-lg text-stone-200">Broward County</span>
+                  </div>
+                </div>
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
