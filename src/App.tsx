@@ -202,6 +202,7 @@ export default function App() {
                     <span className="text-lg text-stone-200">Direct property management</span>
                   </div>
                 </div>
+                <br><br>
                 <p className="text-xl text-stone-300 leading-relaxed mb-8">
                   We are based in South Florida, serving key markets including:
                 </p>
