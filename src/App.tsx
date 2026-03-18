@@ -182,7 +182,7 @@ export default function App() {
                 <p className="text-xl text-stone-300 leading-relaxed mb-8">
                   HABESOL GROUP is a real estate investment company focused on helping homeowners find practical solutions while creating quality housing opportunities for renters and families.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-4 mb-12">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center text-emerald-400">
                       <CheckCircle size={20} />
@@ -203,7 +203,6 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-xl text-stone-300 leading-relaxed mb-8">
-                <br><br>
                   We are based in South Florida, serving key markets including:
                 </p>
                 <div className="space-y-4">
